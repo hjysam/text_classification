@@ -1,0 +1,25 @@
+# Standard libraries
+collections
+itertools
+
+# Data manipulation and analysis
+numpy
+pandas
+
+# Web scraping
+beautifulsoup4
+
+# Text processing and NLP
+nltk
+gensim
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine learning and scikit-learn
+scikit-learn
+transformers
+
+# Model persistence
+torch
