@@ -28,7 +28,7 @@ To run the provided Jupyter Notebook in Google Colab, follow these steps:
 1. Click on the notebook file (`reuters21578_Text_classification_model.ipynb`) in the project repository.
 2. In the top right corner of the GitHub interface, you will see a button labeled "Open in Colab." Click on it.
 
-![Open in Colab](open_in_colab_screenshot.png)
+[Open in Colab](https://colab.research.google.com/github/hjysam/text_classification/blob/main/reuters21578_Text_classification_model.ipynb)
 
 3. The notebook will open in a new tab in Google Colab.
 
@@ -64,7 +64,7 @@ Note: Ensure that you are signed in to your Google account.
   - Provide a classification report.
 
 ## Conclusion
-The project followed a meticulous approach, encompassing thorough data preprocessing, insightful exploratory data analysis (EDA), and rigorous evaluation of machine learning models, including BERT. Through careful handling of features and topics, we were able to predict the topic when feeding new text. Pickling ensured the dataset's readiness for modeling, although BERT may not be suitable. EDA uncovered essential patterns and relationships within the data, guiding our modeling decisions. The performance evaluation of multiple models using precision, recall, and F1-score metrics provided a comprehensive understanding of their strengths and limitations. The findings contribute valuable insights into the dataset and lay the groundwork for future refinements, emphasizing the continuous improvement of predictive accuracy. Despite BERT performing poorly compared to the Classifier, it may also indicate overfitting in the Classifier.
+The project followed a meticulous approach, encompassing thorough data preprocessing, insightful exploratory data analysis (EDA), and rigorous evaluation of classifier models, including BERT. Through careful handling of features and topics, able to predict the topic when feeding new text. Pickling ensured the dataset's readiness for modeling, although BERT may not be suitable. EDA uncovered essential patterns and relationships within the data, guiding our modeling decisions. The performance evaluation of multiple models using precision, recall, and F1-score metrics provided a comprehensive understanding of their strengths and limitations. The findings contribute valuable insights into the dataset and lay the groundwork for future refinements, emphasizing the continuous improvement of predictive accuracy. Despite BERT performing poorly compared to the Classifier, it may also indicate overfitting in the Classifier.
 
 ## Future Works
 Exploring Modified Hayes ("ModHayes") Split or cross-validation, as suggested in the dataset readme, would be beneficial. Running more classifier models or fine-tuning BERT could further improve accuracy.
