@@ -76,5 +76,5 @@ Exploring Modified Hayes ("ModHayes") Split or cross-validation, as suggested in
 - https://github.com/HudaKas/Reuters
 - https://github.com/jared-neumann/Reuters-News-Classification/blob/main/Reuters-News-Classification.ipynb
 - https://github.com/ersinaksar/NLP-based-Reuters-21578-Automated-News-Classification-with-Naive-Bayes/blob/main/Text%20Classification.ipynb
--https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f
+- https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f
 
