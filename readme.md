@@ -48,12 +48,12 @@ Dataset: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/1
 - **Step 4: Data Exploration / Cleaning**
   - Identify frequent words, detect unique words.
 
-- **Step 5: Prediction (Classifier Model)**
+- **Step 5: Prediction based on Classifier Model**
   - Data preparation, Word2Vec embedding.
   - Train classifiers (Logistic Regression, SGD, Multinomial NB).
   - Evaluate and visualize performance.
 
-- **Step 6: Prediction (BERT Transformer)**
+- **Step 6: Prediction based on BERT Transformer**
   - Custom data handling, label processing.
   - Tokenization and model preparation.
   - Evaluate model, generate classification report.
