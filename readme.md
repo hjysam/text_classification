@@ -28,7 +28,7 @@ The collection is structured into five distinct category sets:
    
 ## Running the Jupyter Notebook ONLY in Google Colab
 
-IMPT: The Jupyter Notebook is set up to run directly on Google Colab, leveraging GPU resources for BERT Model processing; see Step 6. 
+Important: The Jupyter Notebook is configured to run seamlessly on Google Colab, allowing for direct downloading of the dataset. It optimally utilizes GPU resources for efficient processing of the BERT Model.
 
 To execute the provided Jupyter Notebook in Google Colab, follow these steps:
 
