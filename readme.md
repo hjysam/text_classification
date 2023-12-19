@@ -11,24 +11,32 @@ The collection is structured into five distinct category sets:
 4. **Organizations (Orgs):** Names of organizations, companies, or institutions.
 5. **Exchanges:** Financial exchanges referenced in articles.
 
-## Feature & Label 
-When engaging in text classification on the Reuters-21578 dataset, it is crucial to consider the following:
+## Feature & Label Assumptions for Reuters-21578 Dataset:
 
 - **Text Features:**
-  - Primary sources: 'Title' and 'Body' attributes contain text content suitable for classification when combined and handled together.
-  - Transformation: Techniques such as TF-IDF or word embeddings can convert text into a numerical format.
+  - Primary sources: The 'Title' and 'Body' attributes collectively contain textual content suitable for classification when processed together.
+  - Transformation: Utilizing techniques like TF-IDF or word embeddings facilitates the conversion of text into a numerical format, enhancing model interpretability and performance.
 
 - **Labels:**
-  - 'Topics' serve as common labels for supervised text classification tasks.
+  - 'Topics' serve as the primary and relevant labels for prediction tasks, reflecting the diverse categories within the dataset based on binary encoding. These labels, encoded using a binary encoder, provide the necessary ground truth for training and evaluating classification models.
 
-## Opening the Jupyter Notebook in Colab
+## Objective
 
-To run the provided Jupyter Notebook in Google Colab, follow these steps:
+1. Construct a multi-class classification model
+   
+2. Generate a comprehensive classification report to assess the model's performance, incorporating metrics such as accuracy, precision, recall, F1 score, and support
+   
+## Running the Jupyter Notebook ONLY in Google Colab
+
+IMPT: The Jupyter Notebook is set up to run directly on Google Colab, leveraging GPU resources for BERT Model processing; see Step 6. 
+
+To execute the provided Jupyter Notebook in Google Colab, follow these steps:
 
 1. Click on the notebook file (`reuters21578_Text_classification_model.ipynb`) in the project repository.
 2. In the top right corner of the GitHub interface, you will see a button labeled "Open in Colab." Click on it.
 
 [Open in Colab](https://colab.research.google.com/github/hjysam/text_classification/blob/main/reuters21578_Text_classification_model.ipynb)
+
 
 3. The notebook will open in a new tab in Google Colab.
 
@@ -44,30 +52,31 @@ Note: Ensure that you are signed in to your Google account.
   - Consider using LEWISSPLIT.
 
 - **Step 3: Data Preprocessing**
-  - Perform stopwords, stemming, and tokenization.
-  - Remove special characters, newlines, and numbers.
+  - Combine title and body as new label known as text 
+  - Perform stopwords removal, stemming, and tokenization.
+  - Eliminate special characters, newlines, and numbers.
 
 - **Step 4: Data Exploration / Cleaning**
-  - Identify the most frequent words.
-  - Identify words that appear only once.
-  - Count the number of unique words.
+  - Identify the most frequent words
+  - Detect words that occur only once
+  - Count the number of unique words
 
-- **Step 5: Prediction based on Classifier Model**
-  - Vectorize and combine using both TF-IDF and word embeddings.
-  - Convert into a binary matrix using MultiLabelBinarizer.
-  - Run multiple classifier models to determine the best accuracy.
-  - Provide a classification report.
+- **Step 5: Prediction using Classifier Model**
+  - Vectorize and combine features using both TF-IDF and word embeddings.
+  - Convert the data into a binary matrix using MultiLabelBinarizer.
+  - Implement multiple classifier models to determine the highest accuracy.
+  - Generate a classification report to evaluate and interpret the model's performance
 
 - **Step 6: Prediction based on BERT Transformer**
-  - Transform to a multi-hot encoding format and create dictionaries for label mapping.
-  - Tokenize input data and configure the BERT Transformer model for sequence classification.
-  - Provide a classification report.
+	- Convert the data to a multi-hot encoding format and establish dictionaries for label mapping.
+  - Tokenize the input data and configure the BERT Transformer model for sequence classification.
+   - Generate a classification report to evaluate and interpret the model's performance
 
 ## Conclusion
 The project followed a meticulous approach, encompassing thorough data preprocessing, insightful exploratory data analysis (EDA), and rigorous evaluation of classifier models, including BERT. Through careful handling of features and topics, able to predict the topic when feeding new text. Pickling ensured the dataset's readiness for modeling, although BERT may not be suitable. EDA uncovered essential patterns and relationships within the data, guiding our modeling decisions. The performance evaluation of multiple models using precision, recall, and F1-score metrics provided a comprehensive understanding of their strengths and limitations. The findings contribute valuable insights into the dataset and lay the groundwork for future refinements, emphasizing the continuous improvement of predictive accuracy. Despite BERT performing poorly compared to the Classifier, it may also indicate overfitting in the Classifier.
 
 ## Future Works
-Exploring Modified Hayes ("ModHayes") Split or cross-validation, as suggested in the dataset readme, would be beneficial. Running more classifier models or fine-tuning BERT could further improve accuracy.
+Exploring Modified Hayes ("ModHayes") Split or cross-validation, as suggested in the dataset readme, would be beneficial. Running more classifier models or fine-tuning BERT could further improve its overall accuracy. It will be great if we can conduct NER analysis to determine category sets for people, places, exchanges and orgs based on title & body. 
 
 ## Reference
 - https://huggingface.co/datasets/reuters21578
